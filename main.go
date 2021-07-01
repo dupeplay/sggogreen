@@ -116,7 +116,9 @@ func checkLoginHandler(response http.ResponseWriter, request *http.Request) {
 		fmt.Printf("%+v\n", ResponseData)
 		if ResponseData.Status == "success" {
 			setSession(email, response)
-			redirectTarget = "/dashboard"
+			if ResponseData.Response.Role == "admin" {
+				redirectTarget = "/dashboard"
+			}
 		} else {
 			redirectTarget = "/errorPage"
 		}
