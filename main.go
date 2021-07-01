@@ -157,7 +157,7 @@ type RequestHomeData struct {
 func init() {
 	tpl = template.Must(template.ParseGlob("templates/*.gohtml"))
 
-	db, err = sql.Open("mysql", "root:@tcp(localhost:3306)/gogreen")
+	db, err = sql.Open("mysql", "root:@tcp(localhost:3307)/gogreen")
 	if err != nil {
 		fmt.Println(err)
 	}
