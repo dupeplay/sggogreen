@@ -139,12 +139,13 @@
         
           <!-- /.Left col -->
           <!-- right col (We are only adding the ID to make the widgets sortable)-->
-          <section class="col-lg-10 connectedSortable">
+          <section class="col-lg-12 connectedSortable">
 
      
             
 
 <h2>User List</h2>
+<a href="/adduser"><button type="button" class="btn btn-block btn-primary">Add New User</button></a>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
@@ -153,7 +154,9 @@
               <th>Name</th>
               <th>Email</th>
               <th>Location</th>
+              <th>Phone</th>
               <th>Device Code</th>
+
               <th>Action</th>
               
             </tr>
@@ -167,50 +170,19 @@
               <td>{{.FirstName}} {{.LastName}} </td>
               <td>{{.Email}}</td>
               <td>{{.Location}}</td>
-                
+               <td>{{.Phone}}</td>
                <td>{{ $dev.String}} </td>
                <td>
-                    <form method="post" action="/homeUserData">
-                    <input name="userId" type="hidden" id ="userId" value ="{{.Id}}" > 
-                <button type="submit" class="btn btn-block btn-primary">view</button>
+                  
+                 <form method="post" action="/edituserui">
+                    <input name="userEditId" type="hidden" id ="userEditId" value ="{{.Id}}" > 
+                <button type="submit" class="btn btn-block btn-info">Edit</button>
+                </form>
+                <form method="post" action="/deleteuser">
+                    <input name="userDeleteId" type="hidden" id ="userDeleteId" value ="{{.Id}}" > 
+                <button type="submit" class="btn btn-block btn-danger">Delete</button>
                 </form>
                </td>
-
-            </tr>
-          {{end}}
-
-          </tbody>
-        </table>
-      </div>
-
-
-
-<h2>Device List</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-             
-              <th>ID  </th>
-               <th>Name</th>
-              <th>Device Code</th>
-             
-           
-              
-            </tr>
-          </thead>
-          <tbody>
-         
-        {{range .Device}}
-       
-
-           <tr>
-              <td>{{.Id}} </td>
-              <td>{{.Name}}</td>
-              <td>{{.DeviceCode}}</td>
-              
-          
-           
 
             </tr>
           {{end}}
