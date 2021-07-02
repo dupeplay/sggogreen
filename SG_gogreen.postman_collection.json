@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "961aa7b9-9a41-4e3f-90c5-cc78e9435228",
+		"name": "SG_gogreen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "userList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "apiKey",
+									"value": "53f223e0-d827-11eb-b8bc-0242ac130003",
+									"type": "text"
+								},
+								{
+									"key": "userID",
+									"value": "46",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}userList",
+							"host": [
+								"{{url}}userList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEvice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apiKey",
+									"value": "53f223e0-d827-11eb-b8bc-0242ac130003",
+									"type": "text"
+								},
+								{
+									"key": "userID",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}device",
+							"host": [
+								"{{url}}device"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jeevan@apstrix.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Vimal",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "KArthik",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Kochi",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "333",
+							"type": "text"
+						},
+						{
+							"key": "deviceCode",
+							"value": "rp-1001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}signup",
+					"host": [
+						"{{url}}signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "vimalkarthik@apstrix.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertHomeParameter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "temperature",
+							"value": "33",
+							"type": "text"
+						},
+						{
+							"key": "humidity",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "deviceCode",
+							"value": "RP-10021",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}insertData",
+					"host": [
+						"{{url}}insertData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homeData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "53f223e0-d827-11eb-b8bc-0242ac130003",
+							"type": "text"
+						},
+						{
+							"key": "userID",
+							"value": "48",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2021-06-28",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}homeData",
+					"host": [
+						"{{url}}homeData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboardDetail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "apiKey",
+							"value": "53f223e0-d827-11eb-b8bc-0242ac130003",
+							"type": "text"
+						},
+						{
+							"key": "userID",
+							"value": "48",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "delhi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}dashboardDetail",
+					"host": [
+						"{{url}}dashboardDetail"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
